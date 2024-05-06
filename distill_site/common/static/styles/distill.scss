@@ -1,0 +1,17 @@
+/*
+    Use @import to combine all CSS libraries into a single aggregated file.
+*/
+
+@charset "UTF-8";
+
+@import "colours";
+
+@import "bulma/bulma";
+@import "fontawesome/fontawesome";
+@import "fontawesome/regular";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
+
+@import "fonts";
+@import "variables";
+@import "template";

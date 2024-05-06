@@ -1,0 +1,201 @@
+html {
+    background-color: $background_colour;
+}
+
+body {
+    font-family: $font_family;
+    font-size: $font_size;
+    color: $text_colour;
+}
+
+strong {
+    font-family: $font_family_bold;
+    font-weight: bold;
+}
+
+a {
+    color: $link_colour;
+    text-decoration: none;
+    border-bottom: 1px $link_underscore_colour dotted;
+    font-weight: bold;
+    font-family: $font_family_bold;
+    &:hover {
+        color: $link_hover_colour;
+    }
+    &.button {
+        text-decoration: none;
+        text-align: left;
+        justify-content: left;
+        box-shadow: 3px 3px 7px $content_text_shadow_colour, 
+                    -3px -3px 7px $content_text_shadow_colour;
+        &:hover {
+            cursor: pointer;
+            color: $hero_button_text_hover_colour;
+            background-color: $hero_button_background_hover_colour;
+            
+        }
+    }
+    &.image {
+        border: 0;
+    }
+}
+
+.hero {
+    a {
+        &.button {
+            box-shadow: 3px 3px 7px $hero_text_shadow_colour, 
+                        -3px -3px 7px $hero_text_shadow_colour;
+        }
+    }
+}
+
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover,
+a.navbar-item.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+.navbar-link.is-active {
+    background-color: $nav_link_active_background_colour;
+    color: $nav_link_active_text_colour;
+}
+
+nav.main-nav {
+    background-color: $nav_background_colour;
+    .navbar-brand {
+        min-height: 0;
+        display: block;
+        a {
+            background-color: $nav_logo_background_colour;
+            &:hover {
+                background-color: $nav_logo_background_hover_colour;
+            }
+        }
+        h1 {
+            font-family: $font_family_bold;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $nav_link_colour;
+        border: 0;
+        &:hover {
+            color: $nav_link_hover_colour !important;
+            background-color: $nav_link_background_hover_colour !important;
+        }
+    }
+    i {
+        font-size: 0.95rem;
+    }
+    .is-active {
+        background-color: $nav_link_active_background_colour !important;
+        color: $nav_link_active_text_colour !important;
+        &:focus {
+            background-color: $nav_link_active_background_colour !important;
+            color: $nav_link_active_text_colour !important;
+        }
+        &:focus-within {
+            background-color: $nav_link_active_background_colour !important;
+            color: $nav_link_active_text_colour !important;
+        }
+    }
+}
+
+section.hero {
+    border: 0;
+    padding: 0;
+    .title, .subtitle {
+        color: $hero_text_colour;
+        text-shadow: 3px 3px 7px $hero_text_shadow_colour, 
+                     -3px -3px 7px $hero_text_shadow_colour;
+    }
+    .title {
+        padding: 0;
+        margin: 0;
+    }
+    .subtitle {
+        padding-top: 2rem;
+        margin: 0;
+    }
+}
+
+.triangles {
+    background-color: $hero_background_colour;
+    background-image: url(/static/images/triangles.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#content {
+    padding: 0 1rem 0 1rem;
+    border-top: 10px $nav_border_colour solid;
+    section {
+        padding: 3rem 0 1rem 0;
+        &.side-pad {
+            padding: 3rem 1rem 1rem 1rem;
+        }
+        p {
+            padding-bottom: 2rem;
+        }
+    }
+    section:not(:last-child) {
+        border-bottom: 1px $content_section_border_colour solid;
+    }
+    .icon-field {
+        i {
+            z-index: 1;
+            position: absolute;
+            padding: 12px 12px 12px 18px;
+            color: $content_install_icon_colour;
+            text-align: left;
+         }
+    }
+    input.install-copypaste {
+        border: 1px $content_code_border_colour solid;
+        color: $text_colour;
+        font-family: $font_family_bold;
+        padding-left: 40px;
+        &:hover {
+            cursor: text;
+        }
+    }
+    pre {
+        background-color: $content_code_background_colour;
+        border: 1px $content_code_border_colour solid;
+        border-radius: 6px;
+        code {
+            color: $content_code_text_colour;
+        }
+        margin-bottom: 2rem;
+    }
+    .is-flex {
+        display: flex;
+    }
+    .is-side-note {
+        color: $content_side_note_header_colour;
+    }
+    ol {
+        padding: 0 0 1rem 1rem;
+    }
+    li {
+        padding: 0 0 0.5rem 1rem;
+    }
+    li::marker {
+        font-weight: bold;
+    }
+}
+
+footer {
+    margin-top: 2rem;
+    background-color: $footer_background_colour;
+    border-top: 10px $footer_border_colour solid;
+    color: $footer_text_colour;
+    text-align: center;
+    padding: 3rem 3rem;
+    strong {
+        color: $footer_text_colour;
+    }
+}
